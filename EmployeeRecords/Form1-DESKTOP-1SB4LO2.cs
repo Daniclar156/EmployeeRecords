@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace EmployeeRecords
 {
@@ -27,7 +26,7 @@ namespace EmployeeRecords
             string newStartDate = dateInput.Text;
             string newSalary = salaryInput.Text;
 
-            Employee newEmployee = new Employee(newID, newFirstName, newLastName, newStartDate, newSalary);
+            Employee newEmployee = new Employee(newID, newFirstName, newLastName, newSalary, newSalary);
             employeeDB.Add(newEmployee);
 
             ClearLabels();
@@ -77,21 +76,6 @@ namespace EmployeeRecords
             lnInput.Text = "";
             dateInput.Text = "";
             salaryInput.Text = "";
-        }
-
-        private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        public void loadDB()
-        {
-            
-        }
-
-        public void saveDB()
-        {
-
         }
     }
 }
